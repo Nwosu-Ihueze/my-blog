@@ -142,46 +142,71 @@ body {
     color: #3DA2ff;
 }
 
-  
-  img {
-    vertical-align: middle;
-  }
-  
-  .img-responsive {
-    display: flex;
-    max-width: 100%;
-    
-  }
-  
-  .grid article {
-    background-color: #FFFFFF;
-    display: flex;
-    margin: 1%;
-    width:  31%;
-  }
-  
-  @media (max-width: 1024px) {
-    .grid article {
-        
-            width:  33.33333%;
-        
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .grid article {
-      width: 48%;
-    }
-  }
-  
-  @media (max-width: 479px) {
-    .grid article {
-      margin: 2% 0;
+  .wrapper {
       width: 100%;
-    }
+      margin: 20px auto ;
   }
+ 
+  .gallery {
+    display: grid;
+    grid-gap: 1px;
+    grid-auto-rows: minmax(100px, auto);
+}
 
-  .masonry #sizer{
-    width:  33.33333%;
-  }
+.gallery>* {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+@media (min-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .two {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .three {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      .four {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .five {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .six {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      .seven{
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .eight{
+        grid-column: 2;
+        grid-row: 3;
+      }
+      .nine{
+        grid-column: 3;
+        grid-row: 3;
+      }
+}
+@media (min-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+   
+}
+
   
